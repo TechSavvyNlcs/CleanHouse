@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "996562465948",
+    "firebase_url": "https://cleanhouse-51b07-default-rtdb.firebaseio.com",
+    "project_id": "cleanhouse-51b07",
+    "storage_bucket": "cleanhouse-51b07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996562465948:android:dcc43ffea9e06f1a916959",
+        "android_client_info": {
+          "package_name": "com.ch03_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFSE7536SSUk6bk9ewNTYbTz6MWXGvDF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
