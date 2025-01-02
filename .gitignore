@@ -20,7 +20,11 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+<<<<<<< HEAD
 **/.xcode.env.local
+=======
+ios/.xcode.env.local
+>>>>>>> 146c5f8310c0cd9663e53514746aa41ee8b31137
 
 # Android/IntelliJ
 #
@@ -31,8 +35,11 @@ local.properties
 *.iml
 *.hprof
 .cxx/
+<<<<<<< HEAD
 *.keystore
 !debug.keystore
+=======
+>>>>>>> 146c5f8310c0cd9663e53514746aa41ee8b31137
 
 # node.js
 #
@@ -40,6 +47,15 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+<<<<<<< HEAD
+=======
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+>>>>>>> 146c5f8310c0cd9663e53514746aa41ee8b31137
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -56,6 +72,7 @@ yarn-error.log
 *.jsbundle
 
 # Ruby / CocoaPods
+<<<<<<< HEAD
 **/Pods/
 /vendor/bundle/
 
@@ -72,3 +89,7 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+=======
+/ios/Pods/
+/vendor/bundle/
+>>>>>>> 146c5f8310c0cd9663e53514746aa41ee8b31137
