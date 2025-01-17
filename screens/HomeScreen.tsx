@@ -1,12 +1,14 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {
+import React, {useState, useEffect, useRef} from 'react'; 
+//import program which is React and use the state, effect, and reference
+import { 
 	View,
 	TouchableOpacity,
 	Platform,
 	PermissionsAndroid,
 	Image,
 	StyleSheet,
-} from 'react-native';
+} from 'react-native'; 
+//From the program 'react-native' bring view, toucableopacity, etc.
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
@@ -15,7 +17,8 @@ import {getDatabase, ref, onValue} from 'firebase/database';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ActionButton from 'react-native-action-button';
-import * as RNLocalize from 'react-native-localize';
+import * as RNLocalize from 'react-native-localize'; 
+//Imports various program and applies specific functions in the the program. While with *, uses everything and it is renamed as RNLocallize
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyANrTR0avqh99Rgr4b6VPS3WiN41H_-y2o',
@@ -24,7 +27,9 @@ const firebaseConfig = {
 	storageBucket: 'cleanhouse-51b07.appspot.com',
 	messagingSenderId: '996562465948',
 	appId: '1:996562465948:web:59a48edb71789577916959',
-	measurementId: 'G-KFHXFZ10RL',
+	measurementId: 'G-KFHXFZ10RL', 
+//The group, 'firebaseConfig' containning different information for each source (e.g. apiKey, authDomain etc.) is kept unchanged (constant).
+//Firebase is the app used for developing apps and the app is imported to Java Script. 
 };
 
 if (!firebase.apps.length) {
@@ -45,6 +50,7 @@ async function requestPermission() {
 		console.log(e);
 	}
 }
+//When the 'requestPermission' is running, other programs cannot intercept as the platform in IOS asks for request Authorization to be always and same for the android.
 
 const translations = {
 	en: {
@@ -64,6 +70,7 @@ const translations = {
 		actionButtonAI: 'AI',
 	},
 };
+//The group, 'translations', sotring with various source names are kept unchanging (constant). There are two versions, one korean and one english. 
 
 const HomeScreen = () => {
 	const navigation = useNavigation();
@@ -75,11 +82,14 @@ const HomeScreen = () => {
 	const mapRef = useRef(null);
 	const db = getDatabase();
 	const starCountRef = ref(db);
+//The group, 'HomeScreen' stays constant as other informations such as 'navigation', 'location' etc which is defined more, also staying constant (?)
 
 	useEffect(() => {
-		const locales = RNLocalize.getLocales();
+		const locales = RNLocalize.getLocales(); 
+		//Gets the user's number of their place surrounding the locals. 
 		if (locales && locales.length > 0) {
 			setLanguage(locales[0].languageCode === 'ko' ? 'ko' : 'en');
+			//The program asks whether to set the language as 'korean' or 'english' by determining the location. 
 		}
 
 		onValue(starCountRef, snapshot => {
